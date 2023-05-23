@@ -10,7 +10,7 @@ function Projects () {
             const response = await fetch("https://sherwoodprojectdata.blob.core.windows.net/tech-challenge/projects.json");
             const jsonData = await response.json();
             setData(jsonData);
-            //console.log(jsonData)
+            //console.log(jsonData) // to log out project data
         }   catch (error) {
             console.error("Error", error);
         }
@@ -23,7 +23,6 @@ function Projects () {
     function displayDate(unix) {
         // function needed to put date in presentable format
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
         const d = new Date(unix*1000)
         // the unix * 1000 is becuase dates are given in seconds 
@@ -41,6 +40,7 @@ function Projects () {
       
 
     const Card = ({project}) => {
+        // takes in individual project data and creates itemCard
         const [isPurchased, setIsPurchased] = useState(false);
 
         const handleClick = () => {
@@ -72,10 +72,13 @@ function Projects () {
     );
 
     return (
+        <div>
+        <h3>Project List</h3>
         <div className="itemGrid">
         {sortedData.map((project) => (
             <Card key={project.id} project={project}/>
         ))}
+        </div>
         </div>
 )
 }

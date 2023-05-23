@@ -5,11 +5,12 @@
   align-items: center;
   justify-content: center;
   font-family: "Exo 2";
-  font-size: 20px;
+  font-size: 60px;
 }
 
 .app-header-name {
   font-family: "Roboto";
+  font-size: 20px;
 }
 
 .image-container {
