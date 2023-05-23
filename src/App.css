@@ -11,3 +11,66 @@
 .app-header-name {
   font-family: "Roboto";
 }
+
+.image-container {
+  width: 100%; /* Set the desired width */
+  height: 70%; /* Set the desired height */
+  border: 1px solid #ccc; /* Optional border styling */
+}
+
+.image {
+  width: 100%; /* Make the image fill the container horizontally */
+  height: 100%; /* Make the image fill the container vertically */
+  object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /*height: 100px;  Set the desired height for the container */
+
+}
+
+.project-card {
+  width: 320px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: lightgrey;
+}
+
+.button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 60pt;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: greenyellow;
+}
+
+.button.purchased {
+  background-color: red;
+}
+
+.button.purchased:hover {
+  background-color: coral;
+}
+
+.backdrop {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f2f2f2;
+  }
+
+.itemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
+  grid-gap: 20px;
+}
