@@ -35,6 +35,11 @@ function Projects () {
         return day +" "+ month + " " + year
     };
 
+    const capitalizeWords = (str) => {
+        return str.replace(/\b\w/g, match => match.toUpperCase());
+      }
+      
+
     const Card = ({project}) => {
         const [isPurchased, setIsPurchased] = useState(false);
 
@@ -49,7 +54,7 @@ function Projects () {
             </div>
             <div className="container">
                 <div className="outline">
-                    <h3> {project.name} </h3>
+                    <h3> {capitalizeWords(project.name)} </h3>
                     <button className={`button ${isPurchased ? 'purchased' : 'purchase'}`} onClick={handleClick}>
                     {isPurchased ? 'Purchased' : 'Purchase'}
                     </button>
